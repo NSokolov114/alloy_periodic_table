@@ -1,0 +1,81 @@
+.container {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: minmax(50px, 0.5fr) minmax(50px, 0.5fr) repeat(10, minmax(100px, 1fr));
+  grid-template-rows: minmax(50px, 0.5fr) repeat(9, minmax(100px, 1fr));
+  align-items: stretch;
+}
+
+
+
+.my-element {
+  background-color: #80BBD8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px black;
+  transition: all 0.5s;
+}
+
+.non-alloy {
+  background-color: grey;
+}
+.my-element:hover {
+  transform: scale(1.2);
+}
+
+.nothing {
+  background: white;
+  box-shadow: none;
+}
+
+.row-0:hover,
+.column-0:hover,
+.column-1:hover,
+.empty:hover,
+.nothing:hover {
+  transform: none;
+}
+
+.latin-name,
+.full-name {
+  color: #80BBD8;
+}
+
+.my-element:hover .latin-name,
+.my-element:hover .full-name {
+   color: black;
+}
+
+.bad:hover {
+  background-color: red;
+}
+
+.good:hover  {
+  background-color: green;
+}
+
+.short-name {
+font-size: 3rem;
+font-weight: bold;
+}
+
+.full-name {
+
+}
+
+.row-0 .short-name,
+.column-0 .short-name,
+.column-1 .short-name  {
+  font-weight: normal;
+}
+
+#VIII {
+  grid-column: span 3;
+}
+
+#five {
+  grid-row: span 2;
+}
